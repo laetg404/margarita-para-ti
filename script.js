@@ -473,27 +473,14 @@
   }
 
   function drawText() {
-    if(messageLines) {
-      ctx.fillStyle='#795B55';
-      ctx.textAlign='center';
-      ctx.textBaseline='middle';
-      ctx.font='italic 20px Georgia,serif';
-
-      const gap=35;
-      const startY=(messageLines.length-1)*gap/2;
-
-      messageLines.forEach((s,i)=>{
-        ctx.fillText(s,0,-(startY-i*gap));
-      });
-
-    } else if(message) {
-      ctx.fillStyle='#795B55';
-      ctx.textAlign='center';
-      ctx.textBaseline='middle';
-      ctx.font='italic 25px Georgia,serif';
-
-      ctx.fillText(message,0,-270);
-    }
+    if (!message || messageLines) return;
+  
+    ctx.fillStyle = '#795B55';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = 'italic 25px Georgia,serif';
+  
+    ctx.fillText(message, 0, -270);
   }
 
   function render(flying=null) {
