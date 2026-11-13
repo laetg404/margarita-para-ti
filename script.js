@@ -498,14 +498,14 @@
 
   function render(flying=null) {
     ctx.save();
-
+  
     ctx.translate(W/2,H/2);
     ctx.scale(1,-1);
-
+  
     drawScene(flying);
-
+  
     ctx.restore();
-
+  
     if(message||messageLines) {
       ctx.save();
       ctx.translate(W/2,H/2);
