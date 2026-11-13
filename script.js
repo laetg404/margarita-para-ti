@@ -8,8 +8,6 @@
   const CENTER_Y = 80, GROUND = -195, R0 = 22;
   const STEM_TOP = CENTER_Y - 4, STEM_BOTTOM = GROUND - 10;
   const rng = mulberry32(7);
-  const W = 850, H = 750, TOTAL = 13;
-  const CENTER_Y = 80, GROUND = -195, R0 = 22;
   const FALL_DURATION = 1600;
   const PETAL_PAUSE = 650;
   let petals = [], destinations = [], grass = [];
